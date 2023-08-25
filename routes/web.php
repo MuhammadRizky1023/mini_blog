@@ -13,9 +13,11 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [PostController::class, 'index']);
 
 Route::get('post', [PostController::class, 'index']);
 Route::get('post/create', [PostController::class, 'create']);
